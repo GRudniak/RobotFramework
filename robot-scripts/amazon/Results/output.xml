@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.6.5 on win32)" generated="20190314 10:40:44.114">
+<suite id="s1" name="Amazon" source="C:\development\robot-scripts\amazon\tests\Amazon.robot">
+<kw name="Insert Testing Data" library="Common" type="setup">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>I am setting up the test data...</arg>
+</arguments>
+<msg timestamp="20190314 10:40:44.429" level="INFO">I am setting up the test data...</msg>
+<status status="PASS" starttime="20190314 10:40:44.429" endtime="20190314 10:40:44.429"></status>
+</kw>
+<status status="PASS" starttime="20190314 10:40:44.428" endtime="20190314 10:40:44.429"></status>
+</kw>
+<test id="s1-t1" name="User must sign in to check out">
+<kw name="Begin Web Test" library="Common" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>http://www.amazon.com</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20190314 10:40:44.431" level="INFO">Opening browser 'chrome' to base url 'http://www.amazon.com'.</msg>
+<status status="PASS" starttime="20190314 10:40:44.430" endtime="20190314 10:40:50.146"></status>
+</kw>
+<status status="PASS" starttime="20190314 10:40:44.430" endtime="20190314 10:40:50.147"></status>
+</kw>
+<kw name="Begin Web Test" library="Common">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>http://www.amazon.com</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20190314 10:40:50.153" level="INFO">Opening browser 'chrome' to base url 'http://www.amazon.com'.</msg>
+<status status="PASS" starttime="20190314 10:40:50.152" endtime="20190314 10:40:56.412"></status>
+</kw>
+<status status="PASS" starttime="20190314 10:40:50.149" endtime="20190314 10:40:56.412"></status>
+</kw>
+<kw name="Click on link" library="Amazon">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=twotabsearchtextbox</arg>
+<arg>Ferrari 458</arg>
+</arguments>
+<msg timestamp="20190314 10:40:56.414" level="INFO">Typing text 'Ferrari 458' into text field 'id=twotabsearchtextbox'.</msg>
+<status status="PASS" starttime="20190314 10:40:56.413" endtime="20190314 10:40:57.925"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="nav-search"]/form/div[2]/div/input</arg>
+</arguments>
+<msg timestamp="20190314 10:40:57.925" level="INFO">Clicking button 'xpath=//*[@id="nav-search"]/form/div[2]/div/input'.</msg>
+<status status="PASS" starttime="20190314 10:40:57.925" endtime="20190314 10:41:01.875"></status>
+</kw>
+<kw name="Wait until page contains" library="Amazon">
+<arguments>
+<arg>results for "Ferrari 458"</arg>
+</arguments>
+<msg timestamp="20190314 10:41:01.876" level="FAIL">Keyword 'Amazon.Wait until page contains' expected 0 arguments, got 1.</msg>
+<status status="FAIL" starttime="20190314 10:41:01.875" endtime="20190314 10:41:01.876"></status>
+</kw>
+<status status="FAIL" starttime="20190314 10:40:56.413" endtime="20190314 10:41:01.876"></status>
+</kw>
+<kw name="End test" library="Common" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20190314 10:41:01.877" endtime="20190314 10:41:04.302"></status>
+</kw>
+<status status="PASS" starttime="20190314 10:41:01.877" endtime="20190314 10:41:04.302"></status>
+</kw>
+<doc>This is some basic info about the test</doc>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="FAIL" starttime="20190314 10:40:44.429" endtime="20190314 10:41:04.305" critical="yes">Keyword 'Amazon.Wait until page contains' expected 0 arguments, got 1.</status>
+</test>
+<kw name="Cleaning Testing Data" library="Common" type="teardown">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>I am cleaning up the test data...</arg>
+</arguments>
+<msg timestamp="20190314 10:41:04.339" level="INFO">I am cleaning up the test data...</msg>
+<status status="PASS" starttime="20190314 10:41:04.338" endtime="20190314 10:41:04.339"></status>
+</kw>
+<status status="PASS" starttime="20190314 10:41:04.337" endtime="20190314 10:41:04.340"></status>
+</kw>
+<status status="FAIL" starttime="20190314 10:40:44.118" endtime="20190314 10:41:04.340"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1">Smoke</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="Amazon">Amazon</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20190314 10:40:44.104" level="ERROR">Error in file 'C:\development\robot-scripts\amazon\tests\Amazon.robot': Setting 'Documentation' used multiple times.</msg>
+<msg timestamp="20190314 10:40:44.160" level="ERROR">Error in file 'C:\development\robot-scripts\amazon\tests\Amazon.robot': Resource file 'Resources\Amazon.robot' does not exist.</msg>
+<msg timestamp="20190314 10:40:44.162" level="ERROR">Error in file 'C:\development\robot-scripts\amazon\tests\Amazon.robot': Resource file 'Resources\Common.robot' does not exist.</msg>
+</errors>
+</robot>
